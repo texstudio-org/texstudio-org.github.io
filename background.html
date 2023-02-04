@@ -13,10 +13,10 @@
 <meta property="og:description" content="About documents separated in several files: LaTeX documents may be spread over multiple files. TeXstudio automatically understands parent/child relations of loaded documents. This includes the dete..." />
   <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Configuring TeXstudio" href="configuration.html" />
 
-    <link rel="shortcut icon" href="_static/texstudio.ico"/><meta name="generator" content="sphinx-5.2.1, furo 2022.09.15"/>
-        <title>Background information - TeXstudio 4.4.1 documentation</title>
+    <link rel="shortcut icon" href="_static/texstudio.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>Background information - TeXstudio 4.5.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -133,7 +133,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.4.1 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.5.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -159,10 +159,10 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.4.1 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.5.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -195,7 +195,8 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -323,6 +324,9 @@ performing highlighting or completion.</p>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--execute-all-tests</span></code></p></td>
 <td><p>Force running all tests.</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--update-translations</span></code></p></td>
+<td><p>generate file <code class="docutils literal notranslate"><span class="pre">additionaltranslation.cpp</span></code>which contains translatable string from <code class="docutils literal notranslate"><span class="pre">uiconfig.xml</span></code>.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -432,7 +436,7 @@ title]{title}</p></li>
 option e.g. \abc{size%l}</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cols</span></code> and <code class="docutils literal notranslate"><span class="pre">preamble</span></code>: columns definition in tabular, etc., e.g.
 \begin{tabular}{cols}</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code>: file name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> or ends with <code class="docutils literal notranslate"><span class="pre">%file</span></code>: file name</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">URL</span></code>: URL</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">options</span></code>: package options, e.g. \usepackage[options]</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">imagefile</span></code>: file name of an image</p></li>
@@ -462,6 +466,8 @@ N needs to be present!)</p></li>
 <code class="docutils literal notranslate"><span class="pre">\verb{verbatimSymbol}#S</span></code> from latex-document.cwl in source code.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">formula</span></code> or ends with <code class="docutils literal notranslate"><span class="pre">%formula</span></code>: The argument is always treated as
 if in math-mode. See chemformula.cwl for an example.</p></li>
+<li><p>ends with <code class="docutils literal notranslate"><span class="pre">%special</span></code>: special argument which relates to data defined via special definition, see classifier ‘s’. The database is the text before <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p></li>
+<li><p>ends with <code class="docutils literal notranslate"><span class="pre">%specialDef</span></code>: special argument which defines data for a database, see classifier ‘s’.</p></li>
 </ul>
 <p>A %-suffix takes precedence over detection by name, i.e. an argument
 <code class="docutils literal notranslate"><span class="pre">file%text</span></code> will be treated as text not as file.</p>
@@ -542,7 +548,7 @@ if in math-mode. See chemformula.cwl for an example.</p></li>
 <td><p>this command declares a color (will be used for color completion only, no syntax checking)</p></td>
 </tr>
 <tr class="row-odd"><td><p>s</p></td>
-<td><p>this command declares a special definition, the definition class is given after a “#”. The class name needs a preceding %. (e.g. %color), also see the examples below.</p></td>
+<td><p>this command declares a special definition, the definition class is given after a “#”. The class name needs a preceding %. (e.g. %color), also see the examples below. Data is inserted again in <code class="docutils literal notranslate"><span class="pre">%special</span></code> argument or via keyvals.</p></td>
 </tr>
 <tr class="row-even"><td><p>V</p></td>
 <td><p>this command declares a verbatim-like environment “\begin{Verbatim}”</p></td>
@@ -589,16 +595,19 @@ if in math-mode. See chemformula.cwl for an example.</p></li>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\begin{align}#\math</span></code></p></td>
 <td><p>declares that the “align”-environment is handled like a math-env, concerning command validity and syntax highlighting!</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\definecolor{name}{model}{color-spec}#s#%color</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\definecolor{name%specialDef}{model}{color-spec}#s#%color</span></code></p></td>
 <td><p>adds <code class="docutils literal notranslate"><span class="pre">name</span></code> to the special list <code class="docutils literal notranslate"><span class="pre">%color</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{label}{params}#l</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\color{color%special}</span></code></p></td>
+<td><p>insert element from special list <code class="docutils literal notranslate"><span class="pre">%color</span></code> (here used as example)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{label}{params}#l</span></code></p></td>
 <td><p>defines the second argument as label. Note: the argument has to be named <code class="docutils literal notranslate"><span class="pre">label</span></code> for this to work.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{customname%labeldef}</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{customname%labeldef}</span></code></p></td>
 <td><p>defines the second argument as label, but you are free to choose the name <code class="docutils literal notranslate"><span class="pre">customname</span></code> which will be used as a placeholder in the completer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{label1%labeldef}{label2%labeldef}</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\myplot{file}{label1%labeldef}{label2%labeldef}</span></code></p></td>
 <td><p>defines the second and third arguments as labels.</p></td>
 </tr>
 </tbody>
@@ -646,6 +655,43 @@ arguments are not available and no completion hints are given.</p>
 .config/texstudio/completion/autogenerated</strong> auto-generated cwls</p></li>
 </ul>
 </section>
+</section>
+<section id="menu-definitions">
+<h2>Menu Definitions<a class="headerlink" href="#menu-definitions" title="Permalink to this heading">#</a></h2>
+<p>TeXstudio allows the user to adapt the menu, see <a class="reference internal" href="configuration.html#configuring-the-menu-advanced-option"><span class="std std-doc">how to configure the Menu</span></a>.</p>
+<p>One way of doing this is by loading a definition file via the script command <code class="docutils literal notranslate"><span class="pre">loadManagedMenu</span></code>. Its format is described here.</p>
+<p>The definition file is an xml file, general description of xml can be found on the internet.</p>
+<p>The following shows an example which redefines the “\documentclass” entry in the latex menu and the “part” entry in the submenu “Sectioning”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;TexMakerXUI&gt;</span>
+<span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;main/latex&quot;</span> <span class="na">text=</span><span class="s">&quot;&amp;amp;LaTeX&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;documentclass&quot;</span> <span class="na">text=</span><span class="s">&quot;\documentclass (redefined)&quot;</span> <span class="na">insert=</span><span class="s">&quot;Redefined&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;menu</span> <span class="na">id=</span><span class="s">&quot;sectioning&quot;</span> <span class="na">text=</span><span class="s">&quot;&amp;amp;Sectioning&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;insert</span> <span class="na">id=</span><span class="s">&quot;part&quot;</span> <span class="na">text=</span><span class="s">&quot;part (redefined)&quot;</span> <span class="na">insert=</span><span class="s">&quot;Redefined part&quot;</span> <span class="na">icon=</span><span class="s">&quot;part&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/menu&gt;</span>
+<span class="nt">&lt;/menu&gt;</span>
+<span class="nt">&lt;/TexMakerXUI&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;TexMakerXUI&gt;...&lt;/TexMakerXUI&gt;</span></code>: mandatory tag to enclose the actual menu definition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;menu</span> <span class="pre">...&gt;...&lt;/menu&gt;</span></code>: define a menu/submenu. All its entries need to be set between the tags.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> attribute: unique identifier. “main/latex” is the “LaTeX” menu. The slash <code class="docutils literal notranslate"><span class="pre">/</span></code> is the hierarchy separator. Deeper hierarchies can be directly addressed. A new <code class="docutils literal notranslate"><span class="pre">id</span></code> adds entries instead of redefining them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> attribute: The text that is shown as the menu name. <code class="docutils literal notranslate"><span class="pre">&amp;amp;</span></code> marks the following character as character shortcut to reach that menu.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;insert</span> <span class="pre">...&gt;</span></code>: insert a menu entry</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> attribute: unique identifier. Here, for example “part”. A new <code class="docutils literal notranslate"><span class="pre">id</span></code> adds entries instead of redefining them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> attribute: The text that is shown as the menu entry name. <code class="docutils literal notranslate"><span class="pre">&amp;amp;</span></code> marks the following character as character shortcut to reach that entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert</span></code> attribute: text to insert. This is a normal txs macro, so a script with the header <code class="docutils literal notranslate"><span class="pre">%SCRIPT</span></code> works as well.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icon</span></code> attribute (optional): icon file to show as icon. Usually txs internal files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shortcut</span></code> attribute (optional): define a short cut, e.g. <code class="docutils literal notranslate"><span class="pre">shortcut=&quot;Ctrl+Shift+T&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">info</span></code>attribute (optional): define a tooltip which describes the functionality of this entry.</p></li>
+</ul>
+</li>
+</ul>
+<p>The “LaTeX” and “Math” menu are mainly defined by using this method. The source can be found <a class="reference external" href="https://github.com/texstudio-org/texstudio/blob/master/uiconfig.xml">here</a>.</p>
 </section>
 <section id="the-document-template-format">
 <h2>The Document Template Format<a class="headerlink" href="#the-document-template-format" title="Permalink to this heading">#</a></h2>
@@ -871,7 +917,7 @@ sudo sh BUILD.sh</p>
 </ul>
 <p>More details on building TeXstudio can be found in the <a class="reference external" href="https://github.com/texstudio-org/texstudio/wiki/Compiling">wiki</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cmake</span></code> detects the presence of optional dependencies and builds accordingly.
-The following optional dependencies are listed below.</p>
+The optional dependencies are listed below.</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -924,13 +970,21 @@ The change is done via cmake options, e.g. <code class="docutils literal notrans
 <td><p>off</p></td>
 <td><p>build self-tests</p></td>
 </tr>
+<tr class="row-odd"><td><p>TEXSTUDIO_ENABLE_DEBUG_LOGGER</p></td>
+<td><p>off</p></td>
+<td><p>build debug logger</p></td>
+</tr>
+<tr class="row-even"><td><p>TEXSTUDIO_ENABLE_MEDIAPLAYER</p></td>
+<td><p>off</p></td>
+<td><p>build with pdf multimedia support. Requires QtMultimedia</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <section id="updating-translations">
 <h3>Updating translations<a class="headerlink" href="#updating-translations" title="Permalink to this heading">#</a></h3>
-<p>With <code class="docutils literal notranslate"><span class="pre">cmake</span></code> the command <code class="docutils literal notranslate"><span class="pre">lupdate</span></code> does not work diretcly.
-Instead when building for qt6 a debug build (<code class="docutils literal notranslate"><span class="pre">DCMAKE_BUILD_TYPE=Debug</span></code>), a traget <code class="docutils literal notranslate"><span class="pre">texstudio_lupdate</span></code> is defined which needs to be called.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">cmake</span></code> the command <code class="docutils literal notranslate"><span class="pre">lupdate</span></code> does not work directly.
+Instead when building for qt6 a debug build (<code class="docutils literal notranslate"><span class="pre">DCMAKE_BUILD_TYPE=Debug</span></code>), a target <code class="docutils literal notranslate"><span class="pre">texstudio_lupdate</span></code> is defined which needs to be called.</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>build&gt;qt-cmake .. -DCMAKE<span class="nb">_</span>BUILD<span class="nb">_</span>TYPE=Debug
 build&gt;cmake --build . -t texstudio<span class="nb">_</span>lupdate
 </pre></div>
@@ -968,9 +1022,7 @@ build&gt;cmake --build . -t texstudio<span class="nb">_</span>lupdate
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -1006,6 +1058,7 @@ build&gt;cmake --build . -t texstudio<span class="nb">_</span>lupdate
 <li><a class="reference internal" href="#cwl-file-placement">cwl file placement</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#menu-definitions">Menu Definitions</a></li>
 <li><a class="reference internal" href="#the-document-template-format">The Document Template Format</a></li>
 <li><a class="reference internal" href="#creating-table-templates">Creating table templates</a></li>
 <li><a class="reference internal" href="#style-sheets">Style Sheets</a></li>
