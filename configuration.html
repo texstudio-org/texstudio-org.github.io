@@ -12,7 +12,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Background information" href="background.html" /><link rel="prev" title="Advanced features" href="advanced.html" />
 
     <link rel="shortcut icon" href="_static/texstudio.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>Configuring TeXstudio - TeXstudio 4.8.4 documentation</title>
+        <title>Configuring TeXstudio - TeXstudio 4.8.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=9701f087" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -131,7 +131,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.8.4 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.8.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -154,7 +154,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">TeXstudio 4.8.4 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.8.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -885,20 +885,25 @@ checked. TeXstudio determines if an option contains natural text and
 thus should be spell checked by looking up its definition in the
 completion word lists. For more information on completion word lists see
 the section on <a class="reference internal" href="#configuring-the-autocompletion">completion</a> and the <a class="reference internal" href="background.html#description-of-the-cwl-format"><span class="std std-ref">description of the cwl format</span></a>.</p>
+<p>TeXstudio comes with a large selection of dictionaries on Windows and MacOS.
+On Linux the system offers Hunspell dictionaries and the corresponding languages should be installed from there.</p>
 <p>The spell checker uses the Hunspell dictionary format, which is widely
 used, e.g. in OpenOffice, LibreOffice and Firefox. Each dictionary
 consists of two files (<code class="docutils literal notranslate"><span class="pre">.dic</span></code> and <code class="docutils literal notranslate"><span class="pre">.aff</span></code>). French, British and German
-dictionaries are distributed with TeXstudio, on windows a large number of languages is provided. You can add additional dictionaries yourself by placing them in the dictionary path. A
+dictionaries are distributed with TeXstudio, on windows and osx a large number of languages is provided. You can add additional dictionaries yourself by placing them in the dictionary path. A
 particularly convenient way to get additional dictionaries is
 downloading a dictionary extension of
 <a class="reference external" href="https://extensions.openoffice.org/de/search?f%5B0%5D=field_project_tags%3A157">OpenOffice</a>
 or
 <a class="reference external" href="https://extensions.libreoffice.org/?Tag%5B0%5D=50&amp;amp;q=&amp;amp;Tags%5B%5D=50">LibreOffice</a>
-and importing them using the button <em>Import Dictionary</em> in the options.</p>
+and importing them using the button <em>Import Dictionary</em> in the options.
+The imported files are extracted into <code class="docutils literal notranslate"><span class="pre">[txs-settings-dir]/dictionaries</span></code>. If the imported file uses subfolders, you need to find the corresponding folder and put it into “Spelling Dictionaries Directories” field.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Linux distributions usually offer a wide range of hunspell dictionaries which can be used.
 The actual dictionaries are usually stored under <code class="docutils literal notranslate"><span class="pre">/usr/share/hunspell</span></code></p>
+<p>On OSX, by default the dictionary path should be <code class="docutils literal notranslate"><span class="pre">[txs-app-dir]/../Resources</span></code>.
+On Windows, by default the dictionary path should be <code class="docutils literal notranslate"><span class="pre">[txs-app-dir]/dictionaries&quot;</span></code>.</p>
 </div>
 <p>You can specify one or more search paths for the dictionaries in the
 options. Multiple paths need to be separated by a semicolon. With the
@@ -1235,7 +1240,7 @@ via a menu command, see <a class="reference internal" href="advanced.html#git-sv
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=4f6f18ad"></script>
+</div><script src="_static/documentation_options.js?v=e62f6ccb"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script type="module" src="_static/scripts/furo.js?v=3e7832f7"></script>
