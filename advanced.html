@@ -12,7 +12,7 @@
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Configuring TeXstudio" href="configuration.html" /><link rel="prev" title="Viewing a document (pdf)" href="viewing.html" />
 
     <link rel="shortcut icon" href="_static/texstudio.ico"/><!-- Generated with Sphinx 7.2.6 and Furo 2024.01.29 -->
-        <title>Advanced features - TeXstudio 4.8.5 documentation</title>
+        <title>Advanced features - TeXstudio 4.8.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=9701f087" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -131,7 +131,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.8.5 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.8.6 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -154,7 +154,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">TeXstudio 4.8.5 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.8.6 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -428,7 +428,7 @@ This is equivalent to
 <h2>Local packages<a class="headerlink" href="#local-packages" title="Link to this heading">#</a></h2>
 <p>Many users define personal commands, settings, colors, etc in a personal file which is included into the latex document via <code class="docutils literal notranslate"><span class="pre">\include</span></code> or <code class="docutils literal notranslate"><span class="pre">\input</span></code>.
 TeXstudio can read the files and take up the defined commands for completion but is does not have any understanding of the arguments like if they are labels, texts or math elements.
-The syntactital definition is given to TeXstudio via <a class="reference internal" href="background.html#description-of-the-cwl-format"><span class="std std-ref">cwl files</span></a>.
+The syntactical definition is given to TeXstudio via <a class="reference internal" href="background.html#description-of-the-cwl-format"><span class="std std-ref">cwl files</span></a>.
 TeXstudio searches for local cwl files for local packages. To notify TeXstudio that a package is local, the package name has to be given as a relative path, e.g. <code class="docutils literal notranslate"><span class="pre">\usepackage{./myPackage}</span></code>.
 TeXstudio looks for <code class="docutils literal notranslate"><span class="pre">./myPackage.cwl</span></code> and loads it if present.</p>
 <div class="admonition note">
@@ -1051,6 +1051,9 @@ expression of the pattern <code class="docutils literal notranslate"><span class
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(?not-highlighted-as:...)</span></code></p></td>
 <td><p>Similar to <code class="docutils literal notranslate"><span class="pre">(?highlighted-as:...)</span></code>, but the macro is deactivated in the given environments.</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(?inEnv:...)</span></code></p></td>
+<td><p>Restrict the macro to certain environments. Only the latest environment is checked in case of nested environments. Environments are only detected in the lines between “\begin”/”\end”, excluding the lines that contain those commands! It also checks for aliases, i.e. all math type environments are aliased as “math” as well. “math” is also detected in symbol started mathmode like $…$.<br>Example: <code class="docutils literal notranslate"><span class="pre">(?inEnv:math)</span></code></p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1260,7 +1263,7 @@ to html” tool.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=e62f6ccb"></script>
+</div><script src="_static/documentation_options.js?v=c69ef620"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script type="module" src="_static/scripts/furo.js?v=3e7832f7"></script>
