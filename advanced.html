@@ -13,7 +13,7 @@
         <link rel="prefetch" href="_static/texstudio128x128.webp" as="image">
 
     <link rel="shortcut icon" href="_static/texstudio.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Advanced features - TeXstudio 4.9.2 documentation</title>
+        <title>Advanced features - TeXstudio 4.9.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.9.2 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.9.3 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.webp" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.9.2 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.9.3 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -612,13 +612,13 @@ menus</p></li>
 <td><p>Calls an external command <strong>cmd</strong>, which includes the program name and its arguments.<br><strong>cmd</strong> may undergo command-line expansion as follows:<br>If <strong>cmd</strong> contains the string <strong>txs:///</strong> or if it does <strong>not</strong> contain any pipe (|) characters, then <strong>cmd</strong> undergoes standard command-line expansion like any other <a class="reference internal" href="configuration.html#command-syntax-in-detail"><span class="std std-ref">external command</span></a>. When expanding any tokens the current file is assumed to be the empty string, so any tokens that use the current file (e.g. <strong>%</strong> or <strong>?</strong>) will expand to the empty string too.<br>If <strong>cmd</strong> does not contain the string <strong>txs:///</strong> and it contains at least one pipe character, then it is executed without any string expansion or replacement.<br>If <strong>workingDirectory</strong> is not set, the working directory will be inherited from the TeXstudio executable. This command returns a ProcessX object which has the following methods: <br>-   waitForFinished: Wait until the process is finished<br>-   getStdout: Returns the stdout<br>-   readAllStandardErrorStr: Returns the stderr<br>-   exitCode: The exit code<br>-   exitStatus: The qt exit status<br>-   terminate or kill: Stops the process<br>If the script does is not granted permission to run the external command, then <strong>system()</strong> returns <strong>null</strong>.<br><br>Examples<br><br>List all the files in the Subversion repository /usr/local/svnrepository<br>The command contains the string <strong>txs:///</strong>, so it undergoes the expansion as an <a class="reference internal" href="configuration.html#command-syntax-in-detail"><span class="std std-ref">external command</span></a>.<br>%SCRIPT<br>cmd = system(“txs:///svn ls /usr/local/svnrepository”)<br>  cmd.waitForFinished()<br>output = cmd.getStdout()<br>alert (output)<br><br>Download the web page from <strong>http://www.my-website.com??arg1=abc&amp;arg2=def</strong> and save it as the local file <strong>/home/john/page.html</strong>.<br>The command does not contain any pipe characters (|), so it undergoes the expansion as an <a class="reference internal" href="configuration.html#command-syntax-in-detail"><span class="std std-ref">external command</span></a>. Note that we have doubled the character <strong>?</strong> in the URL, otherwise it would be expanded to current file which in our case would be the empty string.<br><br>%SCRIPT<br>cmd = system (“wget -O /home/john/page.html http://www.my-website.com??arg1=abc&amp;arg2=def”)<br>cmd.waitForFinished()</p></td>
 </tr>
 <tr class="row-even"><td><p><s>setGlobal(name, value)</s></p></td>
-<td><p>Unsuppoted since txs 4.x. Sets a temporary, global variable</p></td>
+<td><p>Unsupported since txs 4.x. Sets a temporary, global variable</p></td>
 </tr>
 <tr class="row-odd"><td><p><s>getGlobal(name)</s></p></td>
-<td><p>Unsuppoted since txs 4.x. Reads a global variable</p></td>
+<td><p>Unsupported since txs 4.x. Reads a global variable</p></td>
 </tr>
 <tr class="row-even"><td><p><s>hasGlobal(name)</s></p></td>
-<td><p>Unsuppoted since txs 4.x. Checks for the existence of a global variable</p></td>
+<td><p>Unsupported since txs 4.x. Checks for the existence of a global variable</p></td>
 </tr>
 <tr class="row-odd"><td><p>setPersistent(name, value)</p></td>
 <td><p>Sets a global configuration variable. (can change the values of the ini file, requires write privileges)</p></td>
@@ -645,7 +645,7 @@ menus</p></li>
 <td><p>Numeric id of the trigger, if the script was called by an event <a class="reference internal" href="#triggers">trigger</a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><s>include(script)</s></p></td>
-<td><p>Unsuppoted since txs 4.x. Includes another script. Can be a filename or the name of a macro.</p></td>
+<td><p>Unsupported since txs 4.x. Includes another script. Can be a filename or the name of a macro.</p></td>
 </tr>
 <tr class="row-even"><td><p>pdfs</p></td>
 <td><p>List of all open, internal pdf viewers .</p></td>
@@ -795,7 +795,7 @@ menus</p></li>
 <td><p><em>Deprecated:</em> Use getRootDocument() instead</p></td>
 </tr>
 <tr class="row-odd"><td><p>editor.document().getRootDocument();</p></td>
-<td><p>Returns the open document which indireclty includes this document and is not itself included by any other document</p></td>
+<td><p>Returns the open document which indirectly includes this document and is not itself included by any other document</p></td>
 </tr>
 <tr class="row-even"><td><p>editor.document().getMagicComment(name);</p></td>
 <td><p>Returns the content of a magic comment, if it exists</p></td>
@@ -805,6 +805,12 @@ menus</p></li>
 </tr>
 <tr class="row-even"><td><p>editor.document().labelItems/refItems/bibItems</p></td>
 <td><p>Returns the ids of all labels/references or included bibliography files.</p></td>
+</tr>
+<tr class="row-odd"><td><p>editor.document().countLabels(name)</p></td>
+<td><p>Returns number of label definitions for a given name</p></td>
+</tr>
+<tr class="row-even"><td><p>editor.document().countRefs(name)</p></td>
+<td><p>Returns number of references to a given name</p></td>
 </tr>
 <tr class="row-odd"><td><p>editor.document().getLastEnvName(lineNr)</p></td>
 <td><p>Returns the name of the current environment (at the end of the line).</p></td>
@@ -959,46 +965,49 @@ menus</p></li>
 <tr class="row-odd"><td><p>app.createUIFromString(string, [parent])</p></td>
 <td><p>Creates a QWidget* described in the string</p></td>
 </tr>
-<tr class="row-even"><td><p>app.slowOperationStarted()/slowOperationEnded()</p></td>
+<tr class="row-even"><td><p>app.processNotification(string)</p></td>
+<td><p>print string in messages pane</p></td>
+</tr>
+<tr class="row-odd"><td><p>app.slowOperationStarted()/slowOperationEnded()</p></td>
 <td><p>Notify txs about the start/end of a slow operation to temporary disable the endless loop detection.</p></td>
 </tr>
-<tr class="row-odd"><td><p>app.simulateKeyPress(shortcut)</p></td>
+<tr class="row-even"><td><p>app.simulateKeyPress(shortcut)</p></td>
 <td><p>Trigger a KeyPress event for the given shortcut, e.g. <code class="docutils literal notranslate"><span class="pre">app.simulateKeyPress(&quot;Shift+Up&quot;)</span></code>. <em>Note</em>: this is mainly intended for shortcuts and navigation. Currently, it does not support all functions of a KeyPress event. In particular, you cannot type any text.</p></td>
 </tr>
-<tr class="row-even"><td><p>app.aiChat(query)</p></td>
+<tr class="row-odd"><td><p>app.aiChat(query)</p></td>
 <td><p>start the ai chat assistant. If query is not empty, query is executed and the result is shown in the chat assistant, like ai query macros, see <a class="reference internal" href="#ai-queries">macro</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>new UniversalInputDialog()</p></td>
+<tr class="row-even"><td><p>new UniversalInputDialog()</p></td>
 <td><p>Creates a new dialog</p></td>
 </tr>
-<tr class="row-even"><td><p>dialog.add(defaultValue, [description, [id]])</p></td>
+<tr class="row-odd"><td><p>dialog.add(defaultValue, [description, [id]])</p></td>
 <td><p>Adds a new variable with the given default value, optional description and id to the dialog; and returns the corresponding qt component. A string default value becomes a QLineEdit, a number a QSpinBox and an array a QComboBox.</p></td>
 </tr>
-<tr class="row-odd"><td><p>dialog.get(nr/id)</p></td>
+<tr class="row-even"><td><p>dialog.get(nr/id)</p></td>
 <td><p>Returns the current value of the nr-th added variable or the variable with a certain id.</p></td>
 </tr>
-<tr class="row-even"><td><p>dialog.getAll()</p></td>
+<tr class="row-odd"><td><p>dialog.getAll()</p></td>
 <td><p>Returns the value of all variables as combined numerical/associative array. You can use returnvalue[i] to get the i-th variable, and returnvalue.id to get the variable with a certain id.</p></td>
 </tr>
-<tr class="row-odd"><td><p>dialog.exec()</p></td>
+<tr class="row-even"><td><p>dialog.exec()</p></td>
 <td><p>Displays the dialog. Returns 1 if the user accepted the dialog, 0 if it was canceled.</p></td>
 </tr>
-<tr class="row-even"><td><p>dialog.show()</p></td>
+<tr class="row-odd"><td><p>dialog.show()</p></td>
 <td><p>Displays the dialog asynchronously.</p></td>
 </tr>
-<tr class="row-odd"><td><p><s>UniversalInputDialog([[defaultValue_0, description_0, id_0],[defaultValue_1, description_1, id_1], …])</s></p></td>
+<tr class="row-even"><td><p><s>UniversalInputDialog([[defaultValue_0, description_0, id_0],[defaultValue_1, description_1, id_1], …])</s></p></td>
 <td><p>Not working in txs 4.0.0. <s>Short form: Creates a new dialog, adds all variables of the array and call exec on it.</s></p></td>
 </tr>
-<tr class="row-even"><td><p>fileChooser.exec()</p></td>
+<tr class="row-odd"><td><p>fileChooser.exec()</p></td>
 <td><p>show dialog and wait until it is closed again</p></td>
 </tr>
-<tr class="row-odd"><td><p>fileChooser.setDir(dir)</p></td>
+<tr class="row-even"><td><p>fileChooser.setDir(dir)</p></td>
 <td><p>set directory in the dialog to <em>dir</em></p></td>
 </tr>
-<tr class="row-even"><td><p>fileChooser.setFilter(filter)</p></td>
+<tr class="row-odd"><td><p>fileChooser.setFilter(filter)</p></td>
 <td><p>set file filter to <em>filter</em>, using the QT-format, see above</p></td>
 </tr>
-<tr class="row-odd"><td><p>fileChooser.fileName()</p></td>
+<tr class="row-even"><td><p>fileChooser.fileName()</p></td>
 <td><p>return selected filename (after exec)</p></td>
 </tr>
 </tbody>
@@ -1316,7 +1325,7 @@ to html” tool.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=6ac3fd3f"></script>
+</div><script src="_static/documentation_options.js?v=c3838959"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>

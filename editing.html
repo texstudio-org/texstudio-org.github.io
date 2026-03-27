@@ -13,7 +13,7 @@
         <link rel="prefetch" href="_static/texstudio128x128.webp" as="image">
 
     <link rel="shortcut icon" href="_static/texstudio.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Editing a TeX document - TeXstudio 4.9.2 documentation</title>
+        <title>Editing a TeX document - TeXstudio 4.9.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.9.2 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.9.3 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.webp" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.9.2 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.9.3 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -593,7 +593,7 @@ A right click on a label there allows you to insert it as a reference or with a 
 <section id="finding-reference-use">
 <h3>Finding reference use<a class="headerlink" href="#finding-reference-use" title="Link to this heading">¶</a></h3>
 <p>The context menu on labels in the structure view (see above) offers “find usage”.
-This searches in all source files of the document (see <a class="reference internal" href="background.html#about-documents-separated-in-several-files"><span class="std std-ref">root file</span></a>) and finds the occurrence of that particular reference.
+This searches in all source files of the document (see <a class="reference internal" href="background.html#about-documents-separated-into-several-files"><span class="std std-ref">root file</span></a>) and finds the occurrence of that particular reference.
 Here all the references may be changed by changing “Replace by” and clicking “Replace All”.</p>
 <p><img alt="Find reference usage" src="_images/findUsage.webp" /></p>
 <div class="admonition note">
@@ -905,7 +905,7 @@ The drop-down menu allows searching within a “Project”, i.e. all files belon
 <h2>Handling large projects<a class="headerlink" href="#handling-large-projects" title="Link to this heading">¶</a></h2>
 <p>This section describes what support txs provides for larger projects.</p>
 <p>Large projects usually are split into several included files.
-In order to speed up compilation, the package <a class="reference external" href="https://www.ctan.org/pkg/subfiles">subfiles</a> offers compilation of the current document only. txs automatically loads all included files, so that it can provide proposals for user commands, labels and bibitems. To speed up reloading a project, txs caches all files, meaning it writes this information on the disk. When reloading that project, all loaded but not open (hidden) sub-files are just opened from the cached information which speeds up the reloading significantly. Obviously this only works when restoring a previously opened project; the initial opening may take a bit longer, see <a class="reference internal" href="background.html#about-documents-separated-in-several-files"><span class="std std-ref">also</span></a>.</p>
+In order to speed up compilation, the package <a class="reference external" href="https://www.ctan.org/pkg/subfiles">subfiles</a> offers compilation of the current document only. txs automatically loads all included files, so that it can provide proposals for user commands, labels and bibitems. To speed up reloading a project, txs caches all files, meaning it writes this information on the disk. When reloading that project, all loaded but not open (hidden) sub-files are just opened from the cached information which speeds up the reloading significantly. Obviously this only works when restoring a previously opened project; the initial opening may take a bit longer, see <a class="reference internal" href="background.html#about-documents-separated-into-several-files"><span class="std std-ref">also</span></a>.</p>
 </section>
 <section id="collaborative-editing-pair-programming">
 <h2>Collaborative Editing (Pair programming)<a class="headerlink" href="#collaborative-editing-pair-programming" title="Link to this heading">¶</a></h2>
@@ -985,6 +985,65 @@ Pressing <code class="docutils literal notranslate"><span class="pre">Esc</span>
 <p><img alt="block cursor" src="_images/blockCursor.webp" /></p>
 <p>By clicking <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift</span></code>+left click a block from the current cursor to the mouse position is selected.</p>
 <p><img alt="block cursor with selection" src="_images/blockCursor_selection.webp" /></p>
+</section>
+</section>
+<section id="working-with-many-documents">
+<h2>Working with Many Documents<a class="headerlink" href="#working-with-many-documents" title="Link to this heading">¶</a></h2>
+<section id="tabs-and-document-switching">
+<h3>Tabs and Document Switching<a class="headerlink" href="#tabs-and-document-switching" title="Link to this heading">¶</a></h3>
+<p>Each tab provides a context menu:</p>
+<p><img alt="Context menu of a tab showing the actions" src="_images/tabContextMenu.webp" /></p>
+<p>A tooltip on a tab shows the full file path of the document.</p>
+</section>
+<section id="document-lists-with-filters">
+<h3>Document Lists with Filters<a class="headerlink" href="#document-lists-with-filters" title="Link to this heading">¶</a></h3>
+<p>TeXstudio offers filterable lists for navigating many documents:</p>
+<ul>
+<li><p><em>Open Documents:</em> Menu <code class="docutils literal notranslate"><span class="pre">View</span> <span class="pre">/</span> <span class="pre">List</span> <span class="pre">Of</span> <span class="pre">Open</span> <span class="pre">Documents</span></code></p></li>
+<li><p><em>Recent Files:</em> Menu <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">/</span> <span class="pre">Open</span> <span class="pre">Recent</span> <span class="pre">/</span> <span class="pre">File</span> <span class="pre">List</span></code></p>
+<p>Recent entries can be removed via the context menu.</p>
+</li>
+</ul>
+<p>The filter supports multiple words; all must appear in a matching entry.</p>
+<p><em>Examples:</em><br />
+Filter <code class="docutils literal notranslate"><span class="pre">chapter</span> <span class="pre">intro</span></code> shows only entries containing both words.</p>
+<p>Following filters search for <code class="docutils literal notranslate"><span class="pre">filename.tex</span></code> and add line or column numbers:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">filename.tex:120</span></code> : opens selected file at line 120</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filename.tex:120;5</span></code> : opens selected file at line 120, column 5</p></li>
+</ul>
+<p><img alt="Filterable file list with filter field and example entries." src="_images/fileList.webp" /></p>
+</section>
+</section>
+<section id="working-with-views">
+<h2>Working with Views<a class="headerlink" href="#working-with-views" title="Link to this heading">¶</a></h2>
+<section id="opening-a-second-view">
+<h3>Opening a Second View<a class="headerlink" href="#opening-a-second-view" title="Link to this heading">¶</a></h3>
+<p>A split view can be created via the tab context menu using <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">to</span> <span class="pre">Other</span> <span class="pre">View</span></code>.
+If no second view exists, it is created automatically.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A document can only be shown in one view at a time.</p>
+</div>
+<p>When the last document in a view is closed, the empty view is removed automatically.</p>
+<p><img alt="Two views visible, each with its own tab bar." src="_images/splitScreen.webp" /></p>
+</section>
+<section id="arranging-views">
+<h3>Arranging Views<a class="headerlink" href="#arranging-views" title="Link to this heading">¶</a></h3>
+<p>The two views can be arranged:</p>
+<ul class="simple">
+<li><p>side by side with <code class="docutils literal notranslate"><span class="pre">Split</span> <span class="pre">Horizontally</span></code></p></li>
+<li><p>one above the other with <code class="docutils literal notranslate"><span class="pre">Split</span> <span class="pre">Vertically</span></code></p></li>
+</ul>
+<p>These actions are available in the tab context menu.</p>
+</section>
+<section id="adjusting-the-splitter">
+<h3>Adjusting the Splitter<a class="headerlink" href="#adjusting-the-splitter" title="Link to this heading">¶</a></h3>
+<p>A splitter separates the two views. It can be:</p>
+<ul class="simple">
+<li><p>dragged to resize the views</p></li>
+<li><p>double‑clicked to reset to equal size</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -1112,6 +1171,17 @@ Pressing <code class="docutils literal notranslate"><span class="pre">Esc</span>
 <li><a class="reference internal" href="#block-cursor">Block cursor</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#working-with-many-documents">Working with Many Documents</a><ul>
+<li><a class="reference internal" href="#tabs-and-document-switching">Tabs and Document Switching</a></li>
+<li><a class="reference internal" href="#document-lists-with-filters">Document Lists with Filters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#working-with-views">Working with Views</a><ul>
+<li><a class="reference internal" href="#opening-a-second-view">Opening a Second View</a></li>
+<li><a class="reference internal" href="#arranging-views">Arranging Views</a></li>
+<li><a class="reference internal" href="#adjusting-the-splitter">Adjusting the Splitter</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1123,7 +1193,7 @@ Pressing <code class="docutils literal notranslate"><span class="pre">Esc</span>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=6ac3fd3f"></script>
+</div><script src="_static/documentation_options.js?v=c3838959"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
