@@ -7,13 +7,13 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="CHANGELOG.html" />
 <meta property="og:site_name" content="TeXstudio" />
-<meta property="og:description" content="TeXstudio 4.9.4: disable AI wizard by default, enable LLM to use tool functions to access the current document. This allows LLM to manipulate the document directly. This can be disabled., fix losin..." />
-<meta name="description" content="TeXstudio 4.9.4: disable AI wizard by default, enable LLM to use tool functions to access the current document. This allows LLM to manipulate the document directly. This can be disabled., fix losin..." />
+<meta property="og:description" content="TeXstudio 4.9.5: fix crash when setting explicit root doc#4469, improve handling collaboration with teamtype#4454,#4466, workaround win11 style, invisible red background when text not found in sear..." />
+<meta name="description" content="TeXstudio 4.9.5: fix crash when setting explicit root doc#4469, improve handling collaboration with teamtype#4454,#4466, workaround win11 style, invisible red background when text not found in sear..." />
 <link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="prev" title="Background information" href="background.html">
         <link rel="prefetch" href="_static/texstudio128x128.webp" as="image">
 
     <link rel="shortcut icon" href="_static/texstudio.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>CHANGELOG - TeXstudio 4.9.4 documentation</title>
+        <title>CHANGELOG - TeXstudio 4.9.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.9.4 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.9.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.webp" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.9.4 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.9.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -246,6 +246,17 @@
         <article role="main" id="furo-main-content">
           <section id="changelog">
 <h1>CHANGELOG<a class="headerlink" href="#changelog" title="Link to this heading">¶</a></h1>
+<section id="texstudio-4-9-5">
+<h2>TeXstudio 4.9.5<a class="headerlink" href="#texstudio-4-9-5" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>fix crash when setting explicit root doc <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4469">#4469</a></p></li>
+<li><p>improve handling collaboration with teamtype <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4454">#4454</a>,<a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4466">#4466</a></p></li>
+<li><p>workaround win11 style, invisible red background when text not found in searchpanel</p></li>
+<li><p>keep folder structure of imported macros if more than one macro is imported <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4484">#4484</a></p></li>
+<li><p>highlight more tex symbol as keyword <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4465">#4465</a></p></li>
+<li><p>fix addresource bibfile when using citation-style-language <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4477">#4477</a></p></li>
+</ul>
+</section>
 <section id="texstudio-4-9-4">
 <h2>TeXstudio 4.9.4<a class="headerlink" href="#texstudio-4-9-4" title="Link to this heading">¶</a></h2>
 <ul class="simple">
@@ -276,7 +287,7 @@
 <li><p>add functionality to remove entries from the recent files list <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/4338">#4338</a></p></li>
 <li><p>equalize editor sizes with a double-click on the splitter <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/4341">#4341</a></p></li>
 <li><p>switch review command support from easyReview to the changes package <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4177">#4177</a></p></li>
-<li><p>fix opening documentation of latex packages with miktex (Help/Packages Help…)<a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4359">#4359</a></p></li>
+<li><p>fix opening documentation of latex packages with miktex (Help/Packages Help…) <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4359">#4359</a></p></li>
 <li><p>fix searching in pdf <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4337">#4337</a></p></li>
 <li><p>fix inserting tables from libreoffice <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4328">#4328</a></p></li>
 <li><p>fix highlighting in some nested environments <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/4331">#4331</a></p></li>
@@ -377,7 +388,7 @@ and Symbols side panel</p></li>
 <li><p>add Grid menu to windowed and embedded pdf-viewer’s context menu <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3942">#3942</a></p></li>
 <li><p>fix pdf-viewer’s scrollbar with Fit to Width/Window and changing Continuous mode <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3928">#3928</a></p></li>
 <li><p>fix pdf-viewer’s Custom Grid dialog not preset with current Grid settings in Continuous mode <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3929">#3929</a></p></li>
-<li><p>fix pfd-viewer’s page display in non continuous mode <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3952">#3952</a></p></li>
+<li><p>fix pdf-viewer’s page display in non continuous mode <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3952">#3952</a></p></li>
 <li><p>fix pdf-viewer has a small issue when activating single page step <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3957">#3957</a></p></li>
 <li><p>add maximize button to Packages Help (Texdoc) dialog <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3911">#3911</a></p></li>
 <li><p>fix option ‘all packages’ no longer checked in Packages Help with no tex documents opened <a class="reference external" href="https://github.com/texstudio-org/texstudio/pull/3917">#3917</a></p></li>
@@ -437,7 +448,7 @@ and Symbols side panel</p></li>
 <li><p>allow hiding of sidepanel docks via view/show</p></li>
 <li><p>reduce number on visible dock on OSX due to qt osx style weakness</p></li>
 <li><p>fix raised dock after hiding/showing sidepanel <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/3653">#3653</a></p></li>
-<li><p>fallback to simple syntax highligting when tooltip background differs from general background <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/3644">#3644</a></p></li>
+<li><p>fallback to simple syntax highlighting when tooltip background differs from general background <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/3644">#3644</a></p></li>
 <li><p>fix structure view context on sections <a class="reference external" href="https://github.com/texstudio-org/texstudio/issues/3642">#3642</a></p></li>
 <li><p>fix black background on comboboxes with windows11 style (qt6.7.1)</p></li>
 </ul>
@@ -1212,7 +1223,7 @@ before changing to windowed mode (Bug #1876)</p></li>
 <h2>TeXstudio 2.10.8<a class="headerlink" href="#texstudio-2-10-8" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>automatically expand search result if all matches are within one file</p></li>
-<li><p>detection of magic comment % !TeX is more permissive concerning case sensistivity</p></li>
+<li><p>detection of magic comment % !TeX is more permissive concerning case sensitivity</p></li>
 <li><p>fix crash when using \subparagraph</p></li>
 <li><p>fix symbolgrid widget on OSX</p></li>
 <li><p>fix ?save-file trigger not working</p></li>
@@ -1628,7 +1639,7 @@ before changing to windowed mode (Bug #1876)</p></li>
 <li><p>structure tree view: context menu entries to recursively collapse/expand the structure</p></li>
 <li><p>improved hard line wrap with joining lines</p></li>
 <li><p>View -&gt; Focus Viewer now also works for the windowed viewer</p></li>
-<li><p>better detection of LagnuageTool</p></li>
+<li><p>better detection of LanguageTool</p></li>
 <li><p>similarity dictionary</p></li>
 <li><p>“Align Table Columns” now works also for tabu/longtabu</p></li>
 <li><p>updated poppler library, now displays PDF annotations like highlight and underline</p></li>
@@ -1787,7 +1798,7 @@ ref/commands overview</p></li>
 <section id="texmakerx-1-9-9a">
 <h2>TexMakerX 1.9.9a<a class="headerlink" href="#texmakerx-1-9-9a" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>some performance issues on mac have been addressed. It should feel faster for long sible lines on mac.</p></li>
+<li><p>some performance issues on mac have been addressed. It should feel faster for long visible lines on mac.</p></li>
 <li><p>more than one overlay can be shown at the same time e.g. for syntax highlighting and spell checking</p></li>
 <li><p>command replacement in completed commands was added</p></li>
 <li><p>a cut buffer was added. If selected text is replaced with a command via completion, the removed text is used as argument for the inserted command (if applicable)</p></li>
@@ -2032,6 +2043,7 @@ Can be used for inverse search.</p></li>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">CHANGELOG</a><ul>
+<li><a class="reference internal" href="#texstudio-4-9-5">TeXstudio 4.9.5</a></li>
 <li><a class="reference internal" href="#texstudio-4-9-4">TeXstudio 4.9.4</a></li>
 <li><a class="reference internal" href="#texstudio-4-9-3">TeXstudio 4.9.3</a></li>
 <li><a class="reference internal" href="#texstudio-4-9-2">TeXstudio 4.9.2</a></li>
@@ -2148,7 +2160,7 @@ Can be used for inverse search.</p></li>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=2ba0c8e9"></script>
+</div><script src="_static/documentation_options.js?v=82e0bc8f"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
