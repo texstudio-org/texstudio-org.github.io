@@ -13,7 +13,7 @@
         <link rel="prefetch" href="_static/texstudio128x128.webp" as="image">
 
     <link rel="shortcut icon" href="_static/texstudio.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Advanced features - TeXstudio 4.9.5 documentation</title>
+        <title>Advanced features - TeXstudio 4.9.6 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.9.5 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.9.6 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.webp" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.9.5 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.9.6 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -301,7 +301,7 @@ The LLM decides which function to use based on the query and the given descripti
 <tr class="row-even"><td><p>get_selection</p></td>
 <td><p>Get selected text</p></td>
 </tr>
-<tr class="row-odd"><td><p>get_selection</p></td>
+<tr class="row-odd"><td><p>get_text</p></td>
 <td><p>Get complete text of current document</p></td>
 </tr>
 <tr class="row-even"><td><p>set_cursor</p></td>
@@ -431,6 +431,8 @@ document.</p>
 </section>
 <section id="git-svn-support">
 <h2>GIT/SVN Support<a class="headerlink" href="#git-svn-support" title="Link to this heading">¶</a></h2>
+<section id="menu-based">
+<h3>Menu based<a class="headerlink" href="#menu-based" title="Link to this heading">¶</a></h3>
 <p>TeXstudio provides some basic support for version control management with git or subversion (svn).</p>
 <p>Once <a class="reference internal" href="configuration.html#configuring-svn-git-support"><span class="std std-ref">set up</span></a>, saving the document will also generate a check-in.
 This is only the case with explicit saves via “File/Save” (or the shortcut <code class="docutils literal notranslate"><span class="pre">CTRL+S</span></code>), saving via a compile run is not checked in. This allows tweaking the document around compilation runs without overflowing the version management.</p>
@@ -461,6 +463,40 @@ yet unsaved.</p>
 <dt>Show difference …</dt><dd><p>shows diffs of two or three files in the editor. Changes are highlighted.</p>
 </dd>
 </dl>
+</section>
+<section id="git-panel">
+<h3>Git panel<a class="headerlink" href="#git-panel" title="Link to this heading">¶</a></h3>
+<p>TeXstudio provides a Git panel in the side panel which provides basic functionality for using Git.</p>
+<p><img alt="Git panel" src="_images/git_panel.webp" /></p>
+<section id="checkin-files">
+<h4>Checkin files<a class="headerlink" href="#checkin-files" title="Link to this heading">¶</a></h4>
+<p>The file tab allows selecting files, providing a description and committing per button.</p>
+</section>
+<section id="fetch-pull-push-and-refresh">
+<h4>Fetch, pull, push and refresh<a class="headerlink" href="#fetch-pull-push-and-refresh" title="Link to this heading">¶</a></h4>
+<p>The symbols at the top allow you to fetch, pull, push, or refresh the display.</p>
+<p><img alt="fetch,pull and push" src="_images/git_fetch.webp" /></p>
+</section>
+<section id="using-branches">
+<h4>Using branches<a class="headerlink" href="#using-branches" title="Link to this heading">¶</a></h4>
+<p>The current branch is shown on the top left of the Git panel.
+The button allows you to select other available branches, provided no modified files are present.</p>
+<p><img alt="switch branch button" src="_images/git_switch.webp" /></p>
+</section>
+</section>
+<section id="git-init">
+<h3>git init<a class="headerlink" href="#git-init" title="Link to this heading">¶</a></h3>
+<p>In case that the current file is not inside of a git managed folder and neither is any parent folder, the switch branch button symbol changes to “+”. Here a local repository can be initialised in this folder (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span> <span class="pre">.</span></code>).</p>
+<section id="history-tab">
+<h4>History tab<a class="headerlink" href="#history-tab" title="Link to this heading">¶</a></h4>
+<p>The history tab shows the history in a decorated way. Each commit can be clicked to reveal the included files. Clicking on the files shows the difference of that commit with respect to HEAD (or the current state inside txs if the file is open).</p>
+<p>Tooltips on commits show some statistics.</p>
+<p>The context menu on a commit allows copying some information, merging/cherry-picking. A new branch can be created starting from that commit.</p>
+<p>Rollback performs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">revert</span> <span class="pre">&lt;id&gt;..HEAD</span></code>, which generates a new commit which reverts all changes between HEAD and the selected commit.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Checkout</span> <span class="pre">(detached)</span></code> checks out the given commit.</p>
+<p><img alt="Git history" src="_images/git_history_context.webp" /></p>
+</section>
+</section>
 </section>
 <section id="advanced-header-usage">
 <h2>Advanced header usage<a class="headerlink" href="#advanced-header-usage" title="Link to this heading">¶</a></h2>
@@ -527,7 +563,7 @@ This is equivalent to
 <section id="local-packages">
 <h2>Local packages<a class="headerlink" href="#local-packages" title="Link to this heading">¶</a></h2>
 <p>Many users define personal commands, settings, colors, etc in a personal file which is included into the latex document via <code class="docutils literal notranslate"><span class="pre">\include</span></code> or <code class="docutils literal notranslate"><span class="pre">\input</span></code>.
-TeXstudio can read the files and take up the defined commands for completion but is does not have any understanding of the arguments like if they are labels, texts or math elements.
+TeXstudio can read the files and take up the defined commands for completion but it does not have any understanding of the arguments like if they are labels, texts or math elements.
 The syntactical definition is given to TeXstudio via <a class="reference internal" href="background.html#description-of-the-cwl-format"><span class="std std-ref">cwl files</span></a>.
 TeXstudio searches for local cwl files for local packages. To notify TeXstudio that a package is local, the package name has to be given as a relative path, e.g. <code class="docutils literal notranslate"><span class="pre">\usepackage{./myPackage}</span></code>.
 TeXstudio looks for <code class="docutils literal notranslate"><span class="pre">./myPackage.cwl</span></code> and loads it if present.</p>
@@ -1163,7 +1199,7 @@ expression of the pattern <code class="docutils literal notranslate"><span class
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">(?language:...)</span></code></p></td>
-<td><p>The macro is only active if the highlighting of the document matches the given languages (comma sepataed list).<br> Example: <code class="docutils literal notranslate"><span class="pre">(?language:latex)</span></code> or <code class="docutils literal notranslate"><span class="pre">(?language:latex,Sweave)</span></code></p></td>
+<td><p>The macro is only active if the highlighting of the document matches the given languages (comma separated list).<br> Example: <code class="docutils literal notranslate"><span class="pre">(?language:latex)</span></code> or <code class="docutils literal notranslate"><span class="pre">(?language:latex,Sweave)</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">(?highlighted-as:...)</span></code></p></td>
 <td><p>Restrict the macro to certain highlighted environments. The possible values correspond to the list on the syntax highlighting config page.<br>Example: <code class="docutils literal notranslate"><span class="pre">(?highlighted-as:numbers,math-delimiter,math-keyword)</span></code></p></td>
@@ -1178,7 +1214,7 @@ expression of the pattern <code class="docutils literal notranslate"><span class
 </table>
 </div>
 <p>You may combine <code class="docutils literal notranslate"><span class="pre">(?language:...)</span></code> and <code class="docutils literal notranslate"><span class="pre">(?highlighted-as:...)</span></code>
-expressions. However, combing <code class="docutils literal notranslate"><span class="pre">(?highlighted-as:...)</span></code> and
+expressions. However, combining <code class="docutils literal notranslate"><span class="pre">(?highlighted-as:...)</span></code> and
 <code class="docutils literal notranslate"><span class="pre">(?not-highlighted-as:...)</span></code> does not make sense logically and has
 undefined behavior.</p>
 <p>Note that you still need the regular expression of the trigger itself.
@@ -1356,7 +1392,20 @@ to html” tool.</p>
 <li><a class="reference internal" href="#sessions">Sessions</a></li>
 <li><a class="reference internal" href="#user-fold-marker">User Fold Marker</a></li>
 <li><a class="reference internal" href="#bibliography">Bibliography</a></li>
-<li><a class="reference internal" href="#git-svn-support">GIT/SVN Support</a></li>
+<li><a class="reference internal" href="#git-svn-support">GIT/SVN Support</a><ul>
+<li><a class="reference internal" href="#menu-based">Menu based</a></li>
+<li><a class="reference internal" href="#git-panel">Git panel</a><ul>
+<li><a class="reference internal" href="#checkin-files">Checkin files</a></li>
+<li><a class="reference internal" href="#fetch-pull-push-and-refresh">Fetch, pull, push and refresh</a></li>
+<li><a class="reference internal" href="#using-branches">Using branches</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#git-init">git init</a><ul>
+<li><a class="reference internal" href="#history-tab">History tab</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#advanced-header-usage">Advanced header usage</a></li>
 <li><a class="reference internal" href="#local-packages">Local packages</a></li>
 <li><a class="reference internal" href="#personal-macros">Personal macros</a><ul>
@@ -1385,7 +1434,7 @@ to html” tool.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=82e0bc8f"></script>
+</div><script src="_static/documentation_options.js?v=a2512664"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
