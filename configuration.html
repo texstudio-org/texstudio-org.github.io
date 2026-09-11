@@ -13,7 +13,7 @@
         <link rel="prefetch" href="_static/texstudio128x128.webp" as="image">
 
     <link rel="shortcut icon" href="_static/texstudio.ico"><!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
-        <title>Configuring TeXstudio - TeXstudio 4.9.7 documentation</title>
+        <title>Configuring TeXstudio - TeXstudio 4.9.8 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=4c969af8" />
@@ -170,7 +170,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">TeXstudio 4.9.7 documentation</div></a>
+      <a href="index.html"><div class="brand">TeXstudio 4.9.8 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -194,7 +194,7 @@
     <img class="sidebar-logo" src="_static/texstudio128x128.webp" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">TeXstudio 4.9.7 documentation</span>
+  <span class="sidebar-brand-text">TeXstudio 4.9.8 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -386,9 +386,8 @@ TeXstudio” -&gt; “Commands”). To change a command, just click on the
 button at the end of the corresponding line and select the command in
 the file browser : TeXstudio will automatically adapt the syntax of the
 command.</p>
-<p>You can use a number of special characters / character sequences to
-address the context of the current document. They are expanded at
-runtime:</p>
+<p>You can use a number of special characters or character sequences to
+address the context of the current document. They are expanded at runtime:</p>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -411,6 +410,9 @@ runtime:</p>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[txs-settings-dir]</span></code></p></td>
 <td><p>Location of the settings file (texstudio.ini)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> as last character</p></td>
+<td><p>run command detached, i.e. no blocking further commands</p></td>
 </tr>
 </tbody>
 </table>
@@ -530,7 +532,7 @@ program on your computer, if you want to use a command.</p>
 <section id="sumatra-windows-only">
 <h4>Sumatra (Windows only)<a class="headerlink" href="#sumatra-windows-only" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch Sumatra from TeXstudio and configure Sumatra for inverse search</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">sumatra</span> <span class="pre">path)&quot;</span> <span class="pre">-reuse-instance</span> <span class="pre">-forward-search</span> <span class="pre">&quot;?c:am.tex&quot;</span> <span class="pre">&#64;</span> <span class="pre">-inverse-search</span> <span class="pre">&quot;\\&quot;(your</span> <span class="pre">texstudio</span> <span class="pre">path)\\&quot;</span> <span class="pre">\\&quot;%%f\\&quot;</span> <span class="pre">-line</span> <span class="pre">%%l&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span></code></p>
+<dt>Launch Sumatra from TeXstudio and configure Sumatra for inverse search</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">sumatra</span> <span class="pre">path)&quot;</span> <span class="pre">-reuse-instance</span> <span class="pre">-forward-search</span> <span class="pre">&quot;?c:am.tex&quot;</span> <span class="pre">&#64;</span> <span class="pre">-inverse-search</span> <span class="pre">&quot;\\&quot;(your</span> <span class="pre">texstudio</span> <span class="pre">path)\\&quot;</span> <span class="pre">\\&quot;%%f\\&quot;</span> <span class="pre">-line</span> <span class="pre">%%l&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span> <span class="pre">&amp;</span></code></p>
 </dd>
 <dt>Jump to a line in a running Sumatra:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">dde:///SUMATRA/control/[ForwardSearch(&quot;?am.pdf&quot;,&quot;?c:am.tex&quot;,&#64;,0,0,1)]</span></code></p>
 </dd>
@@ -547,14 +549,14 @@ program on your computer, if you want to use a command.</p>
 <section id="foxit-reader">
 <h4>Foxit Reader<a class="headerlink" href="#foxit-reader" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch Foxit Reader from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">Reader</span> <span class="pre">path)&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span></code></p>
+<dt>Launch Foxit Reader from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">Reader</span> <span class="pre">path)&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span> <span class="pre">&amp;</span></code></p>
 </dd>
 </dl>
 </section>
 <section id="acrobat-reader">
 <h4>Acrobat Reader<a class="headerlink" href="#acrobat-reader" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch Acrobat Reader from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;*(your</span> <span class="pre">Reader</span> <span class="pre">path)*&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span></code></p>
+<dt>Launch Acrobat Reader from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;*(your</span> <span class="pre">Reader</span> <span class="pre">path)*&quot;</span> <span class="pre">&quot;?am.pdf&quot;</span> <span class="pre">&amp;</span></code></p>
 </dd>
 </dl>
 <p>Navigation and closing are achieved via DDE commands. Since version 10 of
@@ -619,7 +621,7 @@ writable when compiling.</p>
 <section id="yap-yet-another-previewer">
 <h4>Yap (Yet Another Previewer)<a class="headerlink" href="#yap-yet-another-previewer" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch Yap from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">Yap</span> <span class="pre">path)&quot;</span> <span class="pre">-1</span> <span class="pre">-s</span> <span class="pre">&#64;?c:m.tex</span> <span class="pre">%.dvi</span></code></p>
+<dt>Launch Yap from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">Yap</span> <span class="pre">path)&quot;</span> <span class="pre">-1</span> <span class="pre">-s</span> <span class="pre">&#64;?c:m.tex</span> <span class="pre">%.dvi</span> <span class="pre">&amp;</span></code></p>
 </dd>
 <dt>Launch TeXstudio from Yap</dt><dd><p><code class="docutils literal notranslate"><span class="pre">&quot;(your</span> <span class="pre">TeXstudio</span> <span class="pre">path)&quot;</span> <span class="pre">&quot;%f&quot;</span> <span class="pre">-line</span> <span class="pre">%l</span></code></p>
 </dd>
@@ -632,23 +634,23 @@ writable when compiling.</p>
 <section id="xdvi">
 <h4>xdvi<a class="headerlink" href="#xdvi" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch xdvi from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xdvi</span> <span class="pre">%.dvi</span> <span class="pre">-sourceposition</span> <span class="pre">&#64;:?c:m.tex</span></code></p>
+<dt>Launch xdvi from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xdvi</span> <span class="pre">%.dvi</span> <span class="pre">-sourceposition</span> <span class="pre">&#64;:?c:m.tex</span> <span class="pre">&amp;</span></code></p>
 </dd>
-<dt>Launch xdvi from TeXstudio and enable inverse search</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xdvi</span> <span class="pre">-editor</span> <span class="pre">&quot;texstudio</span> <span class="pre">%f</span> <span class="pre">-line\&quot;</span> <span class="pre">%.dvi</span> <span class="pre">-sourceposition</span> <span class="pre">&#64;:%.tex</span></code></p>
+<dt>Launch xdvi from TeXstudio and enable inverse search</dt><dd><p><code class="docutils literal notranslate"><span class="pre">xdvi</span> <span class="pre">-editor</span> <span class="pre">&quot;texstudio</span> <span class="pre">%f</span> <span class="pre">-line\&quot;</span> <span class="pre">%.dvi</span> <span class="pre">-sourceposition</span> <span class="pre">&#64;:%.tex</span> <span class="pre">&amp;</span></code></p>
 </dd>
 </dl>
 </section>
 <section id="kdvi">
 <h4>kdvi<a class="headerlink" href="#kdvi" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch kdvi from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kdvi</span> <span class="pre">&quot;file:%.dvi#src:&#64;</span> <span class="pre">?c:m.tex&quot;</span></code></p>
+<dt>Launch kdvi from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">kdvi</span> <span class="pre">&quot;file:%.dvi#src:&#64;</span> <span class="pre">?c:m.tex&quot;</span> <span class="pre">&amp;</span></code></p>
 </dd>
 </dl>
 </section>
 <section id="okular">
 <h4>Okular<a class="headerlink" href="#okular" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch okular from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">okular</span> <span class="pre">--unique</span> <span class="pre">%.dvi#src:&#64;</span> <span class="pre">?c:m.tex</span></code></p>
+<dt>Launch okular from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">okular</span> <span class="pre">--unique</span> <span class="pre">%.dvi#src:&#64;</span> <span class="pre">?c:m.tex</span> <span class="pre">&amp;</span></code></p>
 </dd>
 <dt>Launch TeXstudio from Okular</dt><dd><p><code class="docutils literal notranslate"><span class="pre">texstudio</span> <span class="pre">%f</span> <span class="pre">-line</span> <span class="pre">%l</span></code></p>
 </dd>
@@ -657,7 +659,7 @@ writable when compiling.</p>
 <section id="skim">
 <h4>Skim<a class="headerlink" href="#skim" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch Skim from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">(your</span> <span class="pre">Skim</span> <span class="pre">path)/Contents/SharedSupport/displayline</span> <span class="pre">&#64;</span> <span class="pre">?am.pdf</span> <span class="pre">?c:ame</span></code></p>
+<dt>Launch Skim from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">(your</span> <span class="pre">Skim</span> <span class="pre">path)/Contents/SharedSupport/displayline</span> <span class="pre">&#64;</span> <span class="pre">?am.pdf</span> <span class="pre">?c:ame</span> <span class="pre">&amp;</span></code></p>
 </dd>
 <dt>Launch TeXstudio from skim</dt><dd><p>Command <code class="docutils literal notranslate"><span class="pre">/applications/texstudio.app/contents/macos/texstudio</span></code>
 with arguments: <code class="docutils literal notranslate"><span class="pre">&quot;%file&quot;</span> <span class="pre">-line</span> <span class="pre">%line</span></code></p>
@@ -671,7 +673,7 @@ with arguments: <code class="docutils literal notranslate"><span class="pre">&qu
 <section id="qpdfview">
 <h4>qpdfview<a class="headerlink" href="#qpdfview" title="Link to this heading">¶</a></h4>
 <dl class="simple myst">
-<dt>Launch qpdfview from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qpdfview</span> <span class="pre">--unique</span> <span class="pre">?am.pdf#src:?c:am.tex:&#64;:0</span> <span class="pre">2&gt;</span> <span class="pre">/dev/null</span></code></p>
+<dt>Launch qpdfview from TeXstudio</dt><dd><p><code class="docutils literal notranslate"><span class="pre">qpdfview</span> <span class="pre">--unique</span> <span class="pre">?am.pdf#src:?c:am.tex:&#64;:0</span> <span class="pre">2&gt;</span> <span class="pre">/dev/null</span> <span class="pre">&amp;</span></code></p>
 </dd>
 <dt>Launch TeXstudio from qpdfview</dt><dd><p><code class="docutils literal notranslate"><span class="pre">texstudio</span> <span class="pre">&quot;%1&quot;</span> <span class="pre">-line</span> <span class="pre">%2</span></code></p>
 </dd>
@@ -723,7 +725,7 @@ next).</p>
 <em>Options -&gt; Build</em>. Do not use them at <em>Options -&gt; Commands</em>. The latter
 should just be single commands (i.e. do not use <code class="docutils literal notranslate"><span class="pre">|</span></code> there). While it’s
 currently working in some cases, generally we do not guarantee this
-behavior. It can have surprising side effects such abortion of
+behavior. It can have surprising side effects such as abortion of
 compilation in some cases. Also, the use of <code class="docutils literal notranslate"><span class="pre">|</span></code> in <em>Commands</em> may be
 prohibited completely without further notice in the future.</p>
 </div>
@@ -741,11 +743,11 @@ calls <code class="docutils literal notranslate"><span class="pre">txs:///pdflat
 <code class="docutils literal notranslate"><span class="pre">txs:///view-pdf-internal</span></code>, which displays the pdf.</p>
 <p>There is no difference between commands defined as command on the
 command config page, commands defined as build on the build config page,
-or commands defined as user commands. They are just separated in the GUI
+or commands defined as user command. They are just separated in the GUI
 to simplify the interface.</p>
 <p>This also means that you can change every command as you want, ignoring
 its old definition (you could even change its id, when editing the ini
-file.).</p>
+file).</p>
 <p>There are however three always defined internal commands, which can only
 be called and not modified:</p>
 <div class="table-wrapper colwidths-auto docutils container">
@@ -858,8 +860,8 @@ bibtex), and viewers (e.g. only open once).</p>
 the ones that are available in the context in which TeXstudio was
 started. In particular this is true for the PATH. On Linux/OS X the PATH
 may depend on the way you started TeXstudio. Programs started from the
-GUI may have a different PATH setting than programs started from a shell
-(because some variables may only defined in the context of a shell (e.g.
+GUI may have a different PATH setting than programs started from a shell,
+because some variables may only be defined in the context of a shell (e.g.
 via <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>).</p>
 <p>By default, TeXstudio parses environment variables in your commands. The
 syntax is adapted to the according operating system. A variable MYVAR
@@ -870,7 +872,7 @@ be deactivated in the Build section of the options.</p>
 </section>
 <section id="working-directory">
 <h4>Working Directory<a class="headerlink" href="#working-directory" title="Link to this heading">¶</a></h4>
-<p>The working directory is set to the path of root document.</p>
+<p>The working directory is set to the path of the root document.</p>
 </section>
 <section id="shell-functionality">
 <h4>Shell Functionality<a class="headerlink" href="#shell-functionality" title="Link to this heading">¶</a></h4>
@@ -903,7 +905,7 @@ can either do this directly in the user command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cmd /C &quot;/path/to/testscript.bat foo &gt; bar&quot;
 </pre></div>
 </div>
-<p>Alternatively, you can call a wrapper script in the user command</p>
+<p>Alternatively, you can call a wrapper script in the user command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/path/to/wrapperscript foo bar
 </pre></div>
 </div>
@@ -1357,7 +1359,7 @@ Here is a list of some of those settings.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=0b115202"></script>
+</div><script src="_static/documentation_options.js?v=a966a345"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
